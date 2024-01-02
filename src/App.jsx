@@ -1,25 +1,22 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { useRef } from "react";
 
-function App() {
+import gsap from "gsap"; // <-- import GSAP
+import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
+
+export default function App() {
+  const container = useRef();
+
+  useGSAP(
+    () => {
+      // gsap code here...
+      gsap.to(".box", { rotation: 180 }); // <-- automatically reverted
+    },
+    { scope: container }
+  ); // <-- scope for selector text (optional)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className="underline">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div ref={container} className="app">
+      <div className="box">Hello</div>
     </div>
   );
 }
-
-export default App;
