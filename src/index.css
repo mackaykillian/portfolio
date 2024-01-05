@@ -2,11 +2,267 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Supreme Thin*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/*Supreme Thin Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/*Supreme Extralight*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Extralight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/*Supreme Extralight Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-ExtralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/*Supreme Light*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*Supreme Light Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/*Supreme Regular*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Supreme Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*Supreme Medium*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*Supreme Medium Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/*Supreme Bold*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*Supreme Bold Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*Supreme Extrabold*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-Extrabold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*Supreme Extrabold Italic*/
+@font-face {
+  font-family: "Supreme";
+  src: url("./fonts/Supreme-ExtraboldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/*Poppins Thin*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+/*Poppins Thin Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-ThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/*Poppins Extralight*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/*Poppins Extralight Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-ExtraLightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/*Poppins Light*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/*Poppins Light Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-LightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/*Poppins Regular*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Poppins Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*Poppins Medium*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*Poppins Medium Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-MediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/*Poppins Bold*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/*Poppins Bold Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-SemiBoldItalic.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+/*Poppins Bold*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*Poppins Bold Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/*Poppins Extrabold*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*Poppins Extrabold Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-ExtraBoldItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+/*Poppins Black*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/*Poppins Black Italic*/
+@font-face {
+  font-family: "Poppins";
+  src: url("./fonts/Poppins/Poppins-BlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
