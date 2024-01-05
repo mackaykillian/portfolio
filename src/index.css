@@ -5,7 +5,7 @@
 /*Supreme Thin*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Thin.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Thin.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
 }
@@ -13,7 +13,7 @@
 /*Supreme Thin Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-ThinItalic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-ThinItalic.otf") format("opentype");
   font-weight: 100;
   font-style: italic;
 }
@@ -21,7 +21,7 @@
 /*Supreme Extralight*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Extralight.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Extralight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
@@ -29,7 +29,7 @@
 /*Supreme Extralight Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-ExtralightItalic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-ExtralightItalic.otf") format("opentype");
   font-weight: 200;
   font-style: italic;
 }
@@ -37,7 +37,7 @@
 /*Supreme Light*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Light.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
@@ -45,7 +45,7 @@
 /*Supreme Light Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-LightItalic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-LightItalic.otf") format("opentype");
   font-weight: 300;
   font-style: italic;
 }
@@ -53,7 +53,7 @@
 /*Supreme Regular*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Regular.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
@@ -61,7 +61,7 @@
 /*Supreme Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Italic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
 }
@@ -69,7 +69,7 @@
 /*Supreme Medium*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Medium.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
@@ -77,7 +77,7 @@
 /*Supreme Medium Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-MediumItalic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-MediumItalic.otf") format("opentype");
   font-weight: 500;
   font-style: italic;
 }
@@ -85,7 +85,7 @@
 /*Supreme Bold*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Bold.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
@@ -93,7 +93,7 @@
 /*Supreme Bold Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-BoldItalic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-BoldItalic.otf") format("opentype");
   font-weight: 700;
   font-style: italic;
 }
@@ -101,7 +101,7 @@
 /*Supreme Extrabold*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-Extrabold.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-Extrabold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
 }
@@ -109,7 +109,7 @@
 /*Supreme Extrabold Italic*/
 @font-face {
   font-family: "Supreme";
-  src: url("./fonts/Supreme-ExtraboldItalic.otf") format("opentype");
+  src: url("./fonts/Supreme/Supreme-ExtraboldItalic.otf") format("opentype");
   font-weight: 800;
   font-style: italic;
 }
