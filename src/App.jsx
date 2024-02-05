@@ -1,55 +1,56 @@
 import React, { useRef } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
-import { BriefcaseIcon } from "@heroicons/react/24/solid";
-import SplitType from "split-type";
 
 export default function App() {
-  const container = useRef();
-  const arrowblob = useRef();
+  const introFrame = useRef();
   useGSAP(
     () => {
-      gsap.from(".quick-up", { y: 80, stagger: 0.1 });
-      gsap.from("#arrowblob", { y: -1000, ease: "bounce.out", duration: 1.5 });
+      gsap.from(".quick-bold", {
+        fontWeight: 100,
+        duration: 1.3,
+        stagger: 0.07,
+        ease: "power2.inOut",
+      });
     },
-    { scope: container }
+    { scope: introFrame }
   );
-
-  console.log(React.version);
-
   return (
     <div className="app">
-      <div ref={container} className="relative flex flex-col h-screen page-one">
-        <div className="flex flex-row justify-end flex-none pt-6 pb-6 pr-14 header">
-          <div className="text-[32px] font-display quick-up">
-            <span className="font-bold">MacKay</span>
-            <span className="font-light">Killian</span>
-          </div>
-        </div>
-        <div className="flex flex-col items-end justify-end flex-1 font-display">
-          <div className="text-[250px] text-right leading-none font-medium quick-up">
-            Creative
-          </div>
-          <div
-            id="heading"
-            className="text-[250px] text-right leading-none mb-[120px] font-medium quick-up"
-          >
-            Developer
-          </div>
-        </div>
-        <div>
-          <div className="absolute top-0 left-0 flex flex-row origin-left rotate-90 translate-x-[80px] translate-y-[30px]">
-            <BriefcaseIcon className="w-9 h-9 text-black-500" />
-            <div className="ml-4 font-sans text-[40px] leading-none">
-              open to work
-            </div>
-          </div>
+      <div className="mx-[16px]">
+        <div className="flex flex-row justify-between bg-green-400">
+          <div>photo</div>
+          <div>nav</div>
         </div>
         <div
-          id="arrowblob"
-          className="flex flex-row items-center justify-center w-[200px] h-[200px] bg-red-500 rounded-full absolute bottom-[120px] left-[200px]"
+          ref={introFrame}
+          className="flex flex-col h-[60vh] md:h-[80vh]  justify-center bg-blue-100"
         >
-          <div className="">a</div>
+          <div className="mt-[20vh] font-bold uppercase font-display text-[13vw] leading-[13vw] xl:text-[180px] xl:leading-[180px]">
+            <div id="hero-text">
+              <div>
+                <span className="quick-bold">C</span>
+                <span className="quick-bold">r</span>
+                <span className="quick-bold">e</span>
+                <span className="quick-bold">a</span>
+                <span className="quick-bold">t</span>
+                <span className="quick-bold">i</span>
+                <span className="quick-bold">v</span>
+                <span className="quick-bold">e</span>
+              </div>
+              <div>
+                <span className="quick-bold">D</span>
+                <span className="quick-bold">e</span>
+                <span className="quick-bold">v</span>
+                <span className="quick-bold">e</span>
+                <span className="quick-bold">l</span>
+                <span className="quick-bold">o</span>
+                <span className="quick-bold">p</span>
+                <span className="quick-bold">e</span>
+                <span className="quick-bold">r</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
