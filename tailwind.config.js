@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
-        display: ["Supreme", ...defaultTheme.fontFamily.sans],
+        sans: ["Supreme", ...defaultTheme.fontFamily.sans],
+        display: ["Clash Grotesk", ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/*Clash Grotesk Variable*/
+@font-face {
+  font-family: "Clash Grotesk";
+  src: url("./fonts/ClashGrotesk/ClashGrotesk-Variable.ttf") format("truetype");
+  font-weight: 1 999;
+}
+
 /*Supreme Thin*/
 @font-face {
   font-family: "Supreme";
