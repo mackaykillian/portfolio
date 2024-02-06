@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
 import SkillsItem from "./components/SkillsItem";
+import OverviewCard from "./components/OverviewCard";
 
 export default function App() {
   const introFrame = useRef();
@@ -61,41 +62,31 @@ export default function App() {
               </div>
             </div>
             <div id="cards-container" className="flex flex-col ">
-              <div className="flex flex-col w-full p-12 bg-transparent border rounded-md mb-9 h-fit ">
-                <div className="text-3xl font-bold font-display">
-                  Frontend Development
-                </div>
-                <div className="mt-9">Skills</div>
-                <div className="font-sans mt-9">
-                  Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
-                  sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
-                  au1gue.
-                </div>
-              </div>
-              <div className="flex flex-col w-full p-12 bg-transparent border rounded-md mb-9 h-fit ">
-                <div className="text-3xl font-bold font-display">
-                  AR & Spatial Computing
-                </div>
-                <div className="mt-9">
-                  <SkillsItem label="skills item" />
-                </div>
-                <div className="font-sans mt-9">
-                  Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
-                  sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
-                  au1gue.
-                </div>
-              </div>
-              <div className="flex flex-col w-full p-12 bg-transparent border rounded-md mb-9 h-fit ">
-                <div className="text-3xl font-bold font-display">
-                  Rigorous Testing
-                </div>
-                <div className="mt-9">2+ years of experience in QA</div>
-                <div className="font-sans mt-9">
-                  Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
-                  sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
-                  au1gue.
-                </div>
-              </div>
+              <OverviewCard
+                heading="Fontend Development"
+                skillsList={[
+                  "React",
+                  "JS",
+                  "HTML",
+                  "CSS",
+                  "TypeScript",
+                  "Figma",
+                  "Tailwind",
+                ]}
+                bodyText={
+                  "Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus sit vitae pellentesque. Nunc porttitor montes sollicitudin sit au1gue."
+                }
+              />
+              <OverviewCard
+                heading="AR & Spatial Computing"
+                skillsList={["Meta Spark", "Blender"]}
+                bodyText={`Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus sit vitae pellentesque. Nunc porttitor montes sollicitudin sit au1gue.`}
+              />
+              <OverviewCard
+                heading={`Testing for Quality`}
+                subheading={`2+ years of Experience in QA`}
+                bodyText={`Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus sit vitae pellentesque. Nunc porttitor montes sollicitudin sit au1gue.`}
+              />
               <div className="flex flex-row items-end justify-end h-24 p-4 rounded-md bg-pgray-900 mb-9">
                 <div className="font-sans text-lg text-pgray-100">Resume</div>
               </div>
