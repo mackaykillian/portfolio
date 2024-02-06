@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
+import SkillsItem from "./components/SkillsItem";
 
 export default function App() {
   const introFrame = useRef();
@@ -75,7 +76,9 @@ export default function App() {
                 <div className="text-3xl font-bold font-display">
                   AR & Spatial Computing
                 </div>
-                <div className="mt-9">Skills</div>
+                <div className="mt-9">
+                  <SkillsItem label="skills item" />
+                </div>
                 <div className="font-sans mt-9">
                   Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
                   sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
