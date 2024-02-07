@@ -1,8 +1,18 @@
 import React, { useRef } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
+import SkillsItem from "./components/SkillsItem";
+import OverviewCard from "./components/OverviewCard";
+import { useMediaQuery } from "react-responsive";
 
 export default function App() {
+  const xsScreen = useMediaQuery({ minWidth: 0 });
+  const smScreen = useMediaQuery({ minWidth: 640 });
+  const mdScreen = useMediaQuery({ minWidth: 768 });
+  const lgScreen = useMediaQuery({ minWidth: 1024 });
+  const xlScreen = useMediaQuery({ minWidth: 1280 });
+  const xxlScreen = useMediaQuery({ minWidth: 1536 });
+
   const introFrame = useRef();
   useGSAP(
     () => {
@@ -52,6 +62,7 @@ export default function App() {
             </div>
           </div>
         </div>
+        {/* Overview Section */}
         <div id="overviewFrame" className="h-fit bg-pgray-100">
           <div className="mx-[16px] md:mx-[32px] lg:mx-[40px]">
             <div className="flex flex-row justify-end py-8">
@@ -60,45 +71,48 @@ export default function App() {
               </div>
             </div>
             <div id="cards-container" className="flex flex-col ">
-              <div className="flex flex-col w-full p-12 bg-transparent border rounded-md mb-9 h-fit ">
-                <div className="text-3xl font-bold font-display">
-                  Frontend Development
-                </div>
-                <div className="mt-9">Skills</div>
-                <div className="font-sans mt-9">
-                  Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
-                  sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
-                  au1gue.
-                </div>
-              </div>
-              <div className="flex flex-col w-full p-12 bg-transparent border rounded-md mb-9 h-fit ">
-                <div className="text-3xl font-bold font-display">
-                  AR & Spatial Computing
-                </div>
-                <div className="mt-9">Skills</div>
-                <div className="font-sans mt-9">
-                  Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
-                  sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
-                  au1gue.
-                </div>
-              </div>
-              <div className="flex flex-col w-full p-12 bg-transparent border rounded-md mb-9 h-fit ">
-                <div className="text-3xl font-bold font-display">
-                  Rigorous Testing
-                </div>
-                <div className="mt-9">2+ years of experience in QA</div>
-                <div className="font-sans mt-9">
-                  Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus
-                  sit vitae pellentesque. Nunc porttitor montes sollicitudin sit
-                  au1gue.
-                </div>
-              </div>
-              <div className="flex flex-row items-end justify-end h-24 p-4 rounded-md bg-pgray-900 mb-9">
+              {lgScreen ? (
+                <OverviewCard
+                  size={`lg`}
+                  heading="Fontend Development"
+                  skillsList={[
+                    "React",
+                    "JS",
+                    "HTML",
+                    "CSS",
+                    "TypeScript",
+                    "Figma",
+                    "Tailwind",
+                  ]}
+                  bodyText={
+                    "Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus sit vitae pellentesque. Nunc porttitor montes sollicitudin sit au1gue."
+                  }
+                />
+              ) : (
+                <OverviewCard
+                  size={`sm`}
+                  heading="Fontend Development"
+                  skillsList={[
+                    "React",
+                    "JS",
+                    "HTML",
+                    "CSS",
+                    "TypeScript",
+                    "Figma",
+                    "Tailwind",
+                  ]}
+                  bodyText={
+                    "Lorem ipsum dolor sit amet consectetur. Sit congue ipsum netus sit vitae pellentesque. Nunc porttitor montes sollicitudin sit au1gue."
+                  }
+                />
+              )}
+              {/* <div className="flex flex-row items-end justify-end h-24 p-4 rounded-md bg-pgray-900 mb-9">
                 <div className="font-sans text-lg text-pgray-100">Resume</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
+        {/* Projects section */}
       </div>
     </div>
   );
