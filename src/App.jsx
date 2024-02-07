@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react"; // <-- import the hook from our React pac
 import SkillsItem from "./components/SkillsItem";
 import OverviewCard from "./components/OverviewCard";
 import { useMediaQuery } from "react-responsive";
+import IntroView from "./views/intro";
 
 export default function App() {
   const xsScreen = useMediaQuery({ minWidth: 0 });
@@ -32,36 +33,7 @@ export default function App() {
           <div>photo</div>
           <div>nav</div>
         </div>
-        <div
-          ref={introFrame}
-          className="flex flex-col h-[60vh] md:h-[80vh] justify-center mx-[16px] md:mx-[32px] lg:mx-[40px]"
-        >
-          <div className="mt-[20vh] font-bold uppercase font-display text-[13vw] leading-[13vw] xl:text-[180px] xl:leading-[180px]">
-            <div id="hero-text">
-              <div>
-                <span className="quick-bold">C</span>
-                <span className="quick-bold">r</span>
-                <span className="quick-bold">e</span>
-                <span className="quick-bold">a</span>
-                <span className="quick-bold">t</span>
-                <span className="quick-bold">i</span>
-                <span className="quick-bold">v</span>
-                <span className="quick-bold">e</span>
-              </div>
-              <div>
-                <span className="quick-bold">D</span>
-                <span className="quick-bold">e</span>
-                <span className="quick-bold">v</span>
-                <span className="quick-bold">e</span>
-                <span className="quick-bold">l</span>
-                <span className="quick-bold">o</span>
-                <span className="quick-bold">p</span>
-                <span className="quick-bold">e</span>
-                <span className="quick-bold">r</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <IntroView />
         {/* Overview Section */}
         <div id="overviewFrame" className="h-fit bg-pgray-100">
           <div className="mx-[16px] md:mx-[32px] lg:mx-[40px]">
