@@ -1,10 +1,8 @@
 import SkillsItem from "./SkillsItem";
 
-//TODO: Must create size options for responsive design
-
 function OverviewCard({ heading, subheading, skillsList, bodyText, size }) {
   return size == "sm" ? (
-    <div className="flex flex-col w-full p-12 bg-transparent border rounded-md h-fit max-w-[400px] bg-pgray-500">
+    <div className="flex flex-col w-full p-12 bg-transparent border rounded-md h-fit max-w-[400px]">
       <div className="text-[28px] font-bold font-display">{heading}</div>
       {subheading && (
         <div className="text-[28px] font-bold mt-6 font-display">
