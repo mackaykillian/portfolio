@@ -49,6 +49,6 @@ function IntroView() {
   );
 }
 
-export default IntroView;
-
 IntroView.defaultProps = {};
+
+export default IntroView;
