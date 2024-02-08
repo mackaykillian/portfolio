@@ -6,6 +6,7 @@ import IntroView from "./views/IntroView";
 import OverviewView from "./views/OverviewView";
 import ProjectsView from "./views/ProjectsView";
 import AboutView from "./views/AboutView";
+import ConnectView from "./views/ConnectView";
 
 export default function App() {
   const xsScreen = useMediaQuery({ minWidth: 0 });
@@ -42,6 +43,8 @@ export default function App() {
         {/* <ProjectsView /> */}
         {/* About Me Section */}
         <AboutView />
+        {/* Connect Section */}
+        <ConnectView />
       </div>
     </div>
   );
