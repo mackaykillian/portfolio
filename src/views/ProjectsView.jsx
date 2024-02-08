@@ -16,7 +16,7 @@ function ProjectsView() {
           <div className="mb-24 text-5xl font-bold uppercase font-display md:text-6xl lg:text-7x text-pgray-100">
             Projects
           </div>
-          <div className="flex flex-row w-full space-x-10 overflow-scroll">
+          <div className="flex flex-col w-full space-y-6 sm:flex-row sm:overflow-scroll sm:space-x-10 sm:space-y-0">
             {lgScreen ? (
               <>
                 <ProjectTile size="lg" />
