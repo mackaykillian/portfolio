@@ -11,7 +11,7 @@ function ProjectsView() {
 
   return (
     <div className="bg-pgray-900 h-fit">
-      <div className="mx-4 md:mx-8 lg:mx-10">
+      <div className="mx-4 sm:mx-8 lg:mx-10">
         <div className="py-32">
           <div className="mb-24 text-5xl font-bold uppercase font-display md:text-6xl lg:text-7x text-pgray-100">
             Projects
