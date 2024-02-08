@@ -39,7 +39,7 @@ export default function App() {
         {/* Overview Section */}
         <OverviewView />
         {/* Projects Section */}
-        <ProjectsView />
+        {/* <ProjectsView /> */}
         {/* About Me Section */}
         <AboutView />
       </div>
