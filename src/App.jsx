@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import IntroView from "./views/IntroView";
 import OverviewView from "./views/OverviewView";
 import ProjectsView from "./views/ProjectsView";
+import AboutView from "./views/AboutView";
 
 export default function App() {
   const xsScreen = useMediaQuery({ minWidth: 0 });
@@ -37,8 +38,10 @@ export default function App() {
         <IntroView />
         {/* Overview Section */}
         <OverviewView />
-        {/* Projects section */}
-        <ProjectsView />
+        {/* Projects Section */}
+        {/* <ProjectsView /> */}
+        {/* About Me Section */}
+        <AboutView />
       </div>
     </div>
   );
