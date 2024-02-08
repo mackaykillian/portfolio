@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
-import SkillsItem from "./components/SkillsItem";
-import OverviewCard from "./components/OverviewCard";
 import { useMediaQuery } from "react-responsive";
 import IntroView from "./views/IntroView";
 import OverviewView from "./views/OverviewView";
+import ProjectsView from "./views/ProjectsView";
 
 export default function App() {
   const xsScreen = useMediaQuery({ minWidth: 0 });
@@ -39,6 +38,7 @@ export default function App() {
         {/* Overview Section */}
         <OverviewView />
         {/* Projects section */}
+        <ProjectsView />
       </div>
     </div>
   );
