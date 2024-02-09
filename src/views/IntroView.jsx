@@ -18,9 +18,9 @@ function IntroView() {
   return (
     <div
       ref={container}
-      className="flex flex-col h-[60vh] md:h-[80vh] justify-center mx-[16px] md:mx-[32px] lg:mx-[40px]"
+      className="flex flex-col h-[60vh] md:h-[80vh] justify-center mx-[16px] md:mx-[32px] lg:mx-[40px] mt-24 bg-auto"
     >
-      <div className="mt-[20vh] font-bold uppercase font-display text-[13vw] leading-[13vw] xl:text-[180px] xl:leading-[180px]">
+      <div className="mt-[20vh] font-bold font-display text-[13vw] leading-[13vw] xl:text-[180px] xl:leading-[180px]">
         <div id="hero-text">
           <div>
             <span className="quick-bold">C</span>
