@@ -8,20 +8,23 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Supreme", ...defaultTheme.fontFamily.sans],
-        display: ["Clash Grotesk", ...defaultTheme.fontFamily.sans],
+        display: ["Satoshi", ...defaultTheme.fontFamily.sans],
       },
     },
     colors: {
       transparent: "transparent",
       current: "currentColor",
       white: "#ffffff",
-      pgray: {
-        100: "#FBFBFB",
-        200: "#EAEAEA",
-        300: "#D2D2D2",
-        500: "#A1A1A1",
-        700: "#494949",
-        900: "#151515",
+      neutral: {
+        100: "#FDFDFD",
+        200: "#F5F5F5",
+        300: "#E9E9E9",
+        400: "#D9D9D9",
+        500: "#BDBDBD",
+        600: "#888888",
+        700: "#676767",
+        800: "#3F3F3F",
+        900: "#101010",
       },
     },
   },
