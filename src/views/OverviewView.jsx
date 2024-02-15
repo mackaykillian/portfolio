@@ -44,7 +44,7 @@ function OverviewView() {
   const cardSize = smScreen ? "lg" : "sm";
 
   return (
-    <div id="overviewFrame" className="h-fit bg-pgray-100">
+    <div id="overviewFrame" className="bg-transparent h-fit">
       <div className="mx-4 md:mx-8 lg:mx-10">
         <div className="flex flex-row justify-end">
           <div className="mt-32 mb-16 text-5xl font-bold font-display md:text-6xl lg:text-7x">

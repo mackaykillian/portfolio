@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
 import { useMediaQuery } from "react-responsive";
+import Header from "./components/Header";
 import IntroView from "./views/IntroView";
 import OverviewView from "./views/OverviewView";
 import ProjectsView from "./views/ProjectsView";
@@ -31,10 +32,7 @@ export default function App() {
   return (
     <div className="app">
       <div>
-        <div className="flex flex-row justify-between bg-green-400">
-          <div>photo</div>
-          <div>nav</div>
-        </div>
+        <Header />
         {/* Intro Section */}
         <IntroView />
         {/* Overview Section */}
