@@ -30,7 +30,7 @@ const nameStyle = {
 function NavigationItem({ mode, state, size, number, name }) {
   return (
     <div
-      className={`font-display flex flex-row ${spaceStyle[size]} ${colorStyle[mode][state]}`}
+      className={`font-display flex w-fit flex-row ${spaceStyle[size]} ${colorStyle[mode][state]}`}
     >
       <div className={`leading-none ${numberStyle[size]}`}>{`0${number}`}</div>
       <div className={`font-black uppercase leading-none ${nameStyle[size]}`}>
