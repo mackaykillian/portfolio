@@ -1,9 +1,9 @@
-import NavigationItem from "../components/NavigationItem";
+import Navigation from "../components/Navigation";
 
 function SummarySection() {
   return (
-    <div className="h-20 w-full bg-neutral-900 text-neutral-200">
-      <NavigationItem size="lg" mode="dark" />
+    <div className="h-fit w-full bg-neutral-900 text-neutral-200">
+      <Navigation size="lg" mode="dark" />
     </div>
   );
 }
