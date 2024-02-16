@@ -10,6 +10,7 @@ import { useMediaQuery } from "react-responsive";
 // import ConnectView from "./views/ConnectView";
 import SummarySection from "./views/SummarySection";
 import Navigation from "./components/Navigation";
+import IntroSection from "./views/IntroSection";
 
 export default function App() {
   const xsScreen = useMediaQuery({ minWidth: 0 });
@@ -27,6 +28,7 @@ export default function App() {
         </div>
         <div className="w-full lg:flex lg:flex-row lg:justify-end">
           <div className="mx-auto w-10/12 pt-16 lg:mx-0 lg:w-9/12 lg:pr-10">
+            <IntroSection />
             <SummarySection />
           </div>
         </div>
