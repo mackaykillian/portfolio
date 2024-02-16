@@ -20,13 +20,15 @@ export default function App() {
   const xxlScreen = useMediaQuery({ minWidth: 1536 });
 
   return (
-    <div className="app">
-      <div className="flex flex-col bg-neutral-900 px-6 sm:px-8 lg:flex-row lg:px-10 xl:px-20">
-        <div className="w-full pb-4 pt-4 sm:pb-6 sm:pt-6 lg:w-3/12 lg:pb-0 lg:pt-16">
+    <div className="app bg-neutral-900">
+      <div className="">
+        <div className="fixed top-0 w-full pb-4 pr-4 pt-4 sm:pb-6 sm:pr-6 sm:pt-6 lg:h-screen lg:w-3/12 lg:pb-0 lg:pl-10 lg:pt-20 xl:pl-20">
           {lgScreen ? <Navigation size="lg" /> : <Navigation size="sm" />}
         </div>
-        <div className="mx-auto w-full pt-12 sm:w-10/12 lg:w-9/12 lg:pt-16">
-          <SummarySection />
+        <div className="w-full lg:flex lg:flex-row lg:justify-end">
+          <div className="mx-auto w-10/12 pt-16 lg:mx-0 lg:w-9/12 lg:pr-10">
+            <SummarySection />
+          </div>
         </div>
       </div>
     </div>
