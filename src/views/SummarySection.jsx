@@ -25,7 +25,7 @@ function SummarySection() {
         and <span className="text-neutral-900 dark:text-neutral-100">XR</span>{" "}
         solutions
       </div>
-      <div className="mb-20 md:flex md:flex-row md:space-x-20">
+      <div className="pb-20 md:flex md:flex-row md:space-x-20">
         <div className="mb-10 md:mb-0 md:w-1/2">
           <div className="mb-4 text-[14px] uppercase tracking-wide text-neutral-700 sm:mb-8 sm:text-[16px] dark:text-neutral-400">
             My Tools
