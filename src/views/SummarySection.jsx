@@ -11,16 +11,23 @@ function SummarySection() {
   const xxlScreen = useMediaQuery({ minWidth: 1536 });
 
   return (
-    <div className="h-screen w-full">
-      <div className="font-display mb-20 text-[40px] font-black text-neutral-700 sm:mb-40 sm:text-[48px] xl:text-[60px]">
-        <span className="text-neutral-100">Salt Lake City</span> based{" "}
-        <span className="text-neutral-100">developer</span> crafting modern{" "}
-        <span className="text-neutral-100">frontend</span> and{" "}
-        <span className="text-neutral-100">XR</span> solutions
+    <div className="w-full h-fit">
+      <div className="font-display mb-20 text-[40px] font-black text-neutral-400 sm:mb-40 sm:text-[48px] xl:text-[60px] dark:text-neutral-700">
+        <span className="text-neutral-900 dark:text-neutral-100">
+          Salt Lake City
+        </span>{" "}
+        based{" "}
+        <span className="text-neutral-900 dark:text-neutral-100">
+          developer
+        </span>{" "}
+        crafting modern{" "}
+        <span className="text-neutral-900 dark:text-neutral-100">frontend</span>{" "}
+        and <span className="text-neutral-900 dark:text-neutral-100">XR</span>{" "}
+        solutions
       </div>
-      <div className="md:flex md:flex-row md:space-x-20">
-        <div className="md:w-1/2">
-          <div className="mb-4 text-[14px] uppercase tracking-wide text-neutral-400 sm:mb-8 sm:text-[16px]">
+      <div className="pb-20 md:flex md:flex-row md:space-x-20">
+        <div className="mb-10 md:mb-0 md:w-1/2">
+          <div className="mb-4 text-[14px] uppercase tracking-wide text-neutral-700 sm:mb-8 sm:text-[16px] dark:text-neutral-400">
             My Tools
           </div>
           <div className="flex flex-row flex-wrap">
@@ -68,7 +75,7 @@ function SummarySection() {
             </div>
           </div>
         </div>
-        <div className="font-display text-neutral-500 md:w-1/3">
+        <div className="font-display text-neutral-500 md:w-1/3 dark:text-neutral-500">
           Lorem ipsum dolor sit amet consectetur. Rutrum amet ut quam libero.
           Egestas iaculis quis ullamcorper nunc morbi rutrum. Quam leo felis
           proin libero. Lorem in cras eu convallis condimentum. Auctor viverra

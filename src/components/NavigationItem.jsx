@@ -1,12 +1,6 @@
 const colorStyle = {
-  light: {
-    active: "text-neutral-900",
-    inactive: "text-neutral-300",
-  },
-  dark: {
-    active: "text-neutral-100",
-    inactive: "text-neutral-800",
-  },
+  active: "text-neutral-900 dark:text-neutral-100",
+  inactive: "text-neutral-300 dark:text-neutral-800",
 };
 
 const spaceStyle = {
@@ -27,10 +21,10 @@ const nameStyle = {
   lg: "text-[30px]",
 };
 
-function NavigationItem({ mode, state, size, number, name }) {
+function NavigationItem({ state, size, number, name }) {
   return (
     <div
-      className={`font-display flex w-fit flex-row ${spaceStyle[size]} ${colorStyle[mode][state]}`}
+      className={`font-display flex w-fit flex-row ${spaceStyle[size]} ${colorStyle[state]}`}
     >
       <div className={`leading-none ${numberStyle[size]}`}>{`0${number}`}</div>
       <div className={`font-black uppercase leading-none ${nameStyle[size]}`}>
@@ -41,7 +35,6 @@ function NavigationItem({ mode, state, size, number, name }) {
 }
 
 NavigationItem.defaultProps = {
-  mode: "light",
   state: "inactive",
   size: "sm",
   number: "1",
