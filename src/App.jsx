@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import gsap from "gsap"; // <-- import GSAP
 import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,15 +20,20 @@ export default function App() {
 
   const appContainer = useRef();
 
+  const [mode, setMode] = useState("light");
+
   useGSAP(
     () => {
       let trigger = ScrollTrigger.create({
         trigger: "#summary-section",
-        start: "top bottom",
-        end: "bottom top",
+        start: "top center",
+        end: "center top",
         toggleClass: {
           className: "dark",
           targets: "#container",
+        },
+        onUpdate: () => {
+          setMode(mode == "light" ? "dark" : "light");
         },
       });
     },

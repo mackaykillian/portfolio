@@ -6,7 +6,7 @@ function IntroSection() {
       </div>
       <div className="flex h-[50vh] grow flex-row">
         <div className="grow"></div>
-        <div className="h-[40vh] max-h-[400px] w-[30vh] max-w-[300px] bg-neutral-500 bg-[url('./assets/picture-of-me.png')] bg-cover bg-center"></div>
+        <div className="bg-[url(assets/picture-of-me.png')] h-[40vh] max-h-[400px] w-[30vh] max-w-[300px] bg-neutral-500 bg-cover bg-center"></div>
         <div className="w-1/8"></div>
       </div>
       <div></div>
