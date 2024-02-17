@@ -44,16 +44,16 @@ function OverviewView() {
   const cardSize = smScreen ? "lg" : "sm";
 
   return (
-    <div id="overviewFrame" className="bg-transparent h-fit">
+    <div id="overviewFrame" className="h-fit bg-transparent">
       <div className="mx-4 md:mx-8 lg:mx-10">
         <div className="flex flex-row justify-end">
-          <div className="mt-32 mb-16 text-5xl font-bold font-display md:text-6xl lg:text-7x">
+          <div className="font-display lg:text-7x mb-16 mt-32 text-5xl font-bold md:text-6xl">
             What I do best
           </div>
         </div>
         <div
           id="cards-container"
-          className="flex flex-col items-end mb-32 space-y-8"
+          className="mb-32 flex flex-col items-end space-y-8"
         >
           {cardsData.map(
             ({ bodyText, heading, skillsList, subheading }, index) => (
@@ -65,7 +65,7 @@ function OverviewView() {
                 skillsList={skillsList}
                 subheading={subheading}
               />
-            )
+            ),
           )}
         </div>
       </div>
