@@ -52,7 +52,7 @@ export default function App() {
   return (
     <div ref={appContainer} id="appContainer" className="app">
       <div id="container" className="">
-        <div className="transition ease-in bg-neutral-100 dark:bg-neutral-900">
+        <div className="transition ease-in duration-500 bg-neutral-100 dark:bg-neutral-900">
           <div className="fixed top-0 w-full pt-4 pb-4 pr-4 sm:pb-6 sm:pr-6 sm:pt-6 lg:h-screen lg:w-3/12 lg:pb-0 lg:pl-10 lg:pt-20 xl:pl-20">
             {lgScreen ? <Navigation size="lg" activeSection={activeSection} /> : <Navigation size="sm" activeSection={activeSection} />}
           </div>
