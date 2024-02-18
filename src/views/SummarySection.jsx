@@ -15,14 +15,15 @@ function SummarySection() {
   const xxlScreen = useMediaQuery({ minWidth: 1536 });
 
   const container = useRef();
-  const items = document.querySelectorAll('.item')
+  const skillList = ["React", "Tailwind", "HTML", "CSS", "Meta Spark", "Figma"]
 
   useGSAP(() => {
     let ptl = gsap.timeline({ repeat: -1 });
+    const items = document.querySelectorAll('.item')
     items.forEach((item) => {
       let tl = gsap.timeline();
       tl.to(item, {
-        scale: 1.15,
+        scale: 1.1,
         fontWeight: "700",
         duration: 0.2,
         ease: "sine.in",
@@ -67,48 +68,14 @@ function SummarySection() {
             My Tools
           </div>
           <div className="flex flex-row flex-wrap">
-            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
+            {skillList.map((skill, index) => <div key={index} className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
-                label="React"
+                label={skill}
                 logo="react"
               />
-            </div>
-            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in  duration-75">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="Tailwind"
-                logo="react"
-              />
-            </div>
-            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="HTML"
-                logo="react"
-              />
-            </div>
-            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="CSS"
-                logo="react"
-              />
-            </div>
-            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in duration-75">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="Meta Spark"
-                logo="react"
-              />
-            </div>
-            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="Figma"
-                logo="react"
-              />
-            </div>
+            </div>)}
+
           </div>
         </div>
         <div className="font-display text-neutral-500 md:w-1/3 dark:text-neutral-500">
