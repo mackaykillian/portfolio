@@ -1,4 +1,8 @@
 import { useMediaQuery } from "react-responsive";
+import React, { useRef, useState } from "react";
+import gsap from "gsap"; // <-- import GSAP
+import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
+
 import Navigation from "../components/Navigation";
 import SkillItem from "../components/SkillItem";
 
@@ -10,8 +14,41 @@ function SummarySection() {
   const xlScreen = useMediaQuery({ minWidth: 1280 });
   const xxlScreen = useMediaQuery({ minWidth: 1536 });
 
+  const container = useRef();
+  const skillList = ["React", "Tailwind", "HTML", "CSS", "Meta Spark", "Figma"]
+
+  useGSAP(() => {
+    let ptl = gsap.timeline({ repeat: -1 });
+    const items = document.querySelectorAll('.item')
+    items.forEach((item) => {
+      let tl = gsap.timeline();
+      tl.to(item, {
+        scale: 1.1,
+        fontWeight: "700",
+        duration: 0.2,
+        ease: "sine.in",
+        onStart: () => {
+          item.classList.replace('dark:text-neutral-100', 'dark:text-neutral-800')
+          item.classList.add('bg-neutral-100')
+        }
+      })
+      tl.to(item, {
+        scale: 1,
+        fontWeight: "500",
+        duration: 0.3,
+        ease: "sine.out",
+        onComplete: () => {
+          item.classList.replace('dark:text-neutral-800', 'dark:text-neutral-100')
+          item.classList.remove('bg-neutral-100')
+        }
+      }, 1.5)
+      ptl.add(tl, ">0.5")
+    })
+    ptl.resume()
+  }, { scope: container })
+
   return (
-    <div className="w-full h-fit">
+    <div ref={container} className="w-full h-fit">
       <div className="font-display mb-20 text-[40px] font-black text-neutral-400 sm:mb-40 sm:text-[48px] xl:text-[60px] dark:text-neutral-700">
         <span className="text-neutral-900 dark:text-neutral-100">
           Salt Lake City
@@ -31,48 +68,14 @@ function SummarySection() {
             My Tools
           </div>
           <div className="flex flex-row flex-wrap">
-            <div className="mb-2 mr-2">
+            {skillList.map((skill, index) => <div key={index} className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
-                label="React"
+                label={skill}
                 logo="react"
               />
-            </div>
-            <div className="mb-3 mr-2">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="Tailwind"
-                logo="react"
-              />
-            </div>
-            <div className="mb-2 mr-2">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="HTML"
-                logo="react"
-              />
-            </div>
-            <div className="mb-2 mr-2">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="CSS"
-                logo="react"
-              />
-            </div>
-            <div className="mb-2 mr-2">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="Meta Spark"
-                logo="react"
-              />
-            </div>
-            <div className="mb-2 mr-2">
-              <SkillItem
-                size={lgScreen ? "lg" : "sm"}
-                label="Figma"
-                logo="react"
-              />
-            </div>
+            </div>)}
+
           </div>
         </div>
         <div className="font-display text-neutral-500 md:w-1/3 dark:text-neutral-500">
