@@ -1,4 +1,8 @@
 import { useMediaQuery } from "react-responsive";
+import React, { useRef, useState } from "react";
+import gsap from "gsap"; // <-- import GSAP
+import { useGSAP } from "@gsap/react"; // <-- import the hook from our React package
+
 import Navigation from "../components/Navigation";
 import SkillItem from "../components/SkillItem";
 
@@ -10,8 +14,35 @@ function SummarySection() {
   const xlScreen = useMediaQuery({ minWidth: 1280 });
   const xxlScreen = useMediaQuery({ minWidth: 1536 });
 
+  const container = useRef();
+  const items = document.querySelectorAll('.item')
+  let timelines = []
+  let ptl = gsap.timeline();
+  items.forEach((item) => {
+    let tl = gsap.timeline();
+    tl.to(item, {
+      scale: 1.1,
+      fontWeight: "900",
+      duration: 0.5,
+      ease: "power1"
+    })
+    tl.to(item, {
+      scale: 1,
+      fontWeight: "500",
+      duration: 0.5
+    }, 2)
+    ptl.add(tl)
+  })
+
+  useGSAP(() => {
+    let ptl = gsap.timeline();
+    timelines.forEach((tl) => {
+      ptl.add(tl)
+    })
+  }, { scope: container })
+
   return (
-    <div className="w-full h-fit">
+    <div ref={container} className="w-full h-fit">
       <div className="font-display mb-20 text-[40px] font-black text-neutral-400 sm:mb-40 sm:text-[48px] xl:text-[60px] dark:text-neutral-700">
         <span className="text-neutral-900 dark:text-neutral-100">
           Salt Lake City
@@ -31,42 +62,42 @@ function SummarySection() {
             My Tools
           </div>
           <div className="flex flex-row flex-wrap">
-            <div className="mb-2 mr-2">
+            <div className="mb-4 mr-4 item">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="React"
                 logo="react"
               />
             </div>
-            <div className="mb-3 mr-2">
+            <div className="mb-4 mr-4 item">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="Tailwind"
                 logo="react"
               />
             </div>
-            <div className="mb-2 mr-2">
+            <div className="mb-4 mr-4 item">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="HTML"
                 logo="react"
               />
             </div>
-            <div className="mb-2 mr-2">
+            <div className="mb-4 mr-4 item">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="CSS"
                 logo="react"
               />
             </div>
-            <div className="mb-2 mr-2">
+            <div className="mb-4 mr-4 item">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="Meta Spark"
                 logo="react"
               />
             </div>
-            <div className="mb-2 mr-2">
+            <div className="mb-4 mr-4 item">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="Figma"
