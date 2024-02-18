@@ -16,29 +16,34 @@ function SummarySection() {
 
   const container = useRef();
   const items = document.querySelectorAll('.item')
-  let timelines = []
-  let ptl = gsap.timeline();
-  items.forEach((item) => {
-    let tl = gsap.timeline();
-    tl.to(item, {
-      scale: 1.1,
-      fontWeight: "900",
-      duration: 0.5,
-      ease: "power1"
-    })
-    tl.to(item, {
-      scale: 1,
-      fontWeight: "500",
-      duration: 0.5
-    }, 2)
-    ptl.add(tl)
-  })
 
   useGSAP(() => {
-    let ptl = gsap.timeline();
-    timelines.forEach((tl) => {
-      ptl.add(tl)
+    let ptl = gsap.timeline({ repeat: -1 });
+    items.forEach((item) => {
+      let tl = gsap.timeline();
+      tl.to(item, {
+        scale: 1.15,
+        fontWeight: "700",
+        duration: 0.2,
+        ease: "sine.in",
+        onStart: () => {
+          item.classList.replace('dark:text-neutral-100', 'dark:text-neutral-800')
+          item.classList.add('bg-neutral-100')
+        }
+      })
+      tl.to(item, {
+        scale: 1,
+        fontWeight: "500",
+        duration: 0.3,
+        ease: "sine.out",
+        onComplete: () => {
+          item.classList.replace('dark:text-neutral-800', 'dark:text-neutral-100')
+          item.classList.remove('bg-neutral-100')
+        }
+      }, 1.5)
+      ptl.add(tl, ">0.5")
     })
+    ptl.resume()
   }, { scope: container })
 
   return (
@@ -62,42 +67,42 @@ function SummarySection() {
             My Tools
           </div>
           <div className="flex flex-row flex-wrap">
-            <div className="mb-4 mr-4 item">
+            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="React"
                 logo="react"
               />
             </div>
-            <div className="mb-4 mr-4 item">
+            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in  duration-75">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="Tailwind"
                 logo="react"
               />
             </div>
-            <div className="mb-4 mr-4 item">
+            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="HTML"
                 logo="react"
               />
             </div>
-            <div className="mb-4 mr-4 item">
+            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="CSS"
                 logo="react"
               />
             </div>
-            <div className="mb-4 mr-4 item">
+            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in duration-75">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="Meta Spark"
                 logo="react"
               />
             </div>
-            <div className="mb-4 mr-4 item">
+            <div className="mb-4 mr-4 item text-neutral-800 dark:text-neutral-100 rounded-full transition ease-in">
               <SkillItem
                 size={lgScreen ? "lg" : "sm"}
                 label="Figma"

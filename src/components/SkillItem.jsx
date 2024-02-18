@@ -9,7 +9,7 @@ const textStyle = {
 function SkillItem({ size, label }) {
   return (
     <div
-      className={`flex w-fit flex-row space-x-2 rounded-full border-[1px] border-neutral-800 dark:border-neutral-100 px-4 pb-2 pt-[6px] text-neutral-800 dark:text-neutral-100 ${textStyle[size]}`}
+      className={`flex w-fit flex-row space-x-2 rounded-full border-[1px] border-neutral-800 dark:border-neutral-100 px-4 pb-2 pt-[6px] ${textStyle[size]}`}
     >
       <div className="">
         <FontAwesomeIcon icon={faCircleDot} />
