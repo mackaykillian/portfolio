@@ -49,6 +49,19 @@ export default function App() {
     { scope: appContainer }
   );
 
+  // useGSAP(
+  //   () => {
+  //     ScrollTrigger.create({
+  //       trigger: "#intro-section",
+  //       start: "center top",
+  //       onEnter: () => {
+  //         console.log('activate profile button')
+  //       }
+  //     });
+  //   },
+  //   { scope: appContainer }
+  // );
+
   return (
     <div ref={appContainer} id="appContainer" className="app">
       <div id="container" className="">
