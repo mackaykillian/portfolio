@@ -44,6 +44,14 @@ export default function App() {
           setActiveSection(2);
         },
       });
+      ScrollTrigger.create({
+        trigger: "#works-section",
+        start: "top center",
+        end: "bottom center",
+        onUpdate: () => {
+          setActiveSection(3);
+        },
+      });
     },
     { scope: appContainer }
   );

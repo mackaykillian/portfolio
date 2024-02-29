@@ -33,13 +33,13 @@ function Navigation({ size, activeSection }) {
             <NavigationItem number="3" name="works" state={activeSection == 3 ? "active" : "inactive"} />
           </div>
           <div id="item4">
-            <NavigationItem number="4" name="project" state={activeSection == 4 ? "active" : "inactive"} />
+            <NavigationItem number="4" name="about" state={activeSection == 4 ? "active" : "inactive"} />
           </div>
         </div>
       ) : (
         <div ref={navContainer} className={`flex flex-col items-end h-6 space-y-2 overflow-hidden pr-2`} id="navigation-sm">
           <div id="itemX">
-            <NavigationItem number={activeSection} name={activeSection == 1 ? "intro" : activeSection == 2 ? "summary" : "intro"} state="active" />
+            <NavigationItem number={activeSection} name={activeSection == 1 ? "intro" : activeSection == 2 ? "summary" : activeSection == 3 ? "works" : "intro"} state="active" />
           </div>
         </div>
       )}
