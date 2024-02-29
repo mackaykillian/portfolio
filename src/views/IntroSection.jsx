@@ -19,16 +19,6 @@ function IntroSection() {
         borderRadius: '16px',
         duration: 1
       });
-
-      // ScrollTrigger.create({
-      //   trigger: '#page-heading',
-      //   start: "top center",
-      //   onToggle: () => {
-      //     console.log("make profile smaller")
-      //     tl.reversed() ? tl.play() : tl.reverse()
-      //   },
-
-      // });
     },
     {}
   );

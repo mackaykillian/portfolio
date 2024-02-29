@@ -5,8 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 
 import Navigation from "./components/Navigation";
-import SummarySection from "./views/SummarySection";
 import IntroSection from "./views/IntroSection";
+import SummarySection from "./views/SummarySection";
+import WorksSection from "./views/WorksSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,6 +62,9 @@ export default function App() {
               </div>
               <div id="summary-section">
                 <SummarySection />
+              </div>
+              <div id="works-section">
+                <WorksSection />
               </div>
             </div>
           </div>
