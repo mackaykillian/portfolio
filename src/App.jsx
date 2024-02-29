@@ -4,23 +4,22 @@ import { useGSAP } from "@gsap/react"; // <-- import the hook from our React pac
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
 
-import SummarySection from "./views/SummarySection";
 import Navigation from "./components/Navigation";
 import IntroSection from "./views/IntroSection";
+import SummarySection from "./views/SummarySection";
+import WorksSection from "./views/WorksSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
-  const xsScreen = useMediaQuery({ minWidth: 0 });
-  const smScreen = useMediaQuery({ minWidth: 640 });
-  const mdScreen = useMediaQuery({ minWidth: 768 });
+  // const xsScreen = useMediaQuery({ minWidth: 0 });
+  // const smScreen = useMediaQuery({ minWidth: 640 });
+  // const mdScreen = useMediaQuery({ minWidth: 768 });
   const lgScreen = useMediaQuery({ minWidth: 1024 });
-  const xlScreen = useMediaQuery({ minWidth: 1280 });
-  const xxlScreen = useMediaQuery({ minWidth: 1536 });
+  // const xlScreen = useMediaQuery({ minWidth: 1280 });
+  // const xxlScreen = useMediaQuery({ minWidth: 1536 });
 
   const appContainer = useRef();
-
-  const [mode, setMode] = useState("light");
   const [activeSection, setActiveSection] = useState(1)
 
   useGSAP(
@@ -30,7 +29,7 @@ export default function App() {
         start: "top top",
         end: "bottom center",
         onUpdate: () => {
-          setMode(setActiveSection(1));
+          setActiveSection(1);
         },
       });
       ScrollTrigger.create({
@@ -42,25 +41,20 @@ export default function App() {
           targets: "#container",
         },
         onUpdate: () => {
-          setMode(setActiveSection(2));
+          setActiveSection(2);
+        },
+      });
+      ScrollTrigger.create({
+        trigger: "#works-section",
+        start: "top center",
+        end: "bottom center",
+        onUpdate: () => {
+          setActiveSection(3);
         },
       });
     },
     { scope: appContainer }
   );
-
-  // useGSAP(
-  //   () => {
-  //     ScrollTrigger.create({
-  //       trigger: "#intro-section",
-  //       start: "center top",
-  //       onEnter: () => {
-  //         console.log('activate profile button')
-  //       }
-  //     });
-  //   },
-  //   { scope: appContainer }
-  // );
 
   return (
     <div ref={appContainer} id="appContainer" className="app">
@@ -76,6 +70,9 @@ export default function App() {
               </div>
               <div id="summary-section">
                 <SummarySection />
+              </div>
+              <div id="works-section">
+                <WorksSection />
               </div>
             </div>
           </div>
