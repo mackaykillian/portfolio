@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation";
 import IntroSection from "./views/IntroSection";
 import SummarySection from "./views/SummarySection";
 import WorksSection from "./views/WorksSection";
+import AboutSection from "./views/AboutSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,18 @@ export default function App() {
           setActiveSection(3);
         },
       });
+      ScrollTrigger.create({
+        trigger: "#about-section",
+        start: "top center",
+        end: "bottom center",
+        toggleClass: {
+          className: "dark",
+          targets: "#container",
+        },
+        onUpdate: () => {
+          setActiveSection(4);
+        },
+      });
     },
     { scope: appContainer }
   );
@@ -73,6 +86,9 @@ export default function App() {
               </div>
               <div id="works-section">
                 <WorksSection />
+              </div>
+              <div id="about-section">
+                <AboutSection />
               </div>
             </div>
           </div>

@@ -51,11 +51,11 @@ function SummarySection() {
     <div ref={container} className="w-full h-fit py-20 sm:py-60">
       <div className="font-display mb-20 text-[40px] font-black text-neutral-400 sm:mb-40 sm:text-[48px] xl:text-[60px] dark:text-neutral-700 ">
         <span className="text-neutral-900 dark:text-neutral-100">
-          Salt Lake City
+          Developer
         </span>{" "}
-        based{" "}
+        based in {" "}
         <span className="text-neutral-900 dark:text-neutral-100">
-          developer
+          SLC
         </span>{" "}
         crafting modern{" "}
         <span className="text-neutral-900 dark:text-neutral-100">frontend</span>{" "}
